@@ -1,6 +1,8 @@
 # Sistema de Registro de Usuarios - Coink
 
 Una solución completa full-stack para el registro de usuarios con seguimiento de ubicación geográfica (País, Departamento, Municipio), construida con .NET 8, PostgreSQL y JavaScript Vanilla.
+
+> **Nota**: La implementación del Frontend y la containerización con Docker no eran requisitos estrictos de la prueba, pero se incluyeron como un valor agregado para facilitar la instalación y ofrecer una mejor visualización de los datos.
 ---
 
 ## � Instrucciones de Ejecución
