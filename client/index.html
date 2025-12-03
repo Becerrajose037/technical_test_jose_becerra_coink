@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <button id="langToggle" class="lang-toggle">
+            <span>🌐</span>
+            <span id="currentLang">ES</span>
+        </button>
+
+        <header class="header">
+            <div class="header-content">
+                <h1 class="title">
+                    <span class="icon">👤</span>
+                    <span data-i18n="appTitle">User Registration System</span>
+                </h1>
+                <p class="subtitle" data-i18n="appSubtitle">Register users with geographic location tracking</p>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <section class="card form-section">
+                <h2 class="section-title" data-i18n="registerTitle">Register New User</h2>
+
+                <form id="registrationForm" class="registration-form">
+                    <div class="form-group">
+                        <label for="name" class="form-label" data-i18n="labelName">Full Name *</label>
+                        <input type="text" id="name" name="name" class="form-input" data-placeholder="placeholderName"
+                            placeholder="Enter full name" required minlength="2" maxlength="200">
+                        <span class="error-message" id="nameError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone" class="form-label" data-i18n="labelPhone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" class="form-input" data-placeholder="placeholderPhone"
+                            placeholder="+1 555 123 4567" required minlength="7" maxlength="20">
+                        <span class="error-message" id="phoneError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="address" class="form-label" data-i18n="labelAddress">Address *</label>
+                        <textarea id="address" name="address" class="form-input form-textarea"
+                            data-placeholder="placeholderAddress" placeholder="Enter full address" required
+                            minlength="5" maxlength="500" rows="3"></textarea>
+                        <span class="error-message" id="addressError"></span>
+                    </div>
+
+                    <div class="location-grid">
+                        <div class="form-group">
+                            <label for="country" class="form-label" data-i18n="labelCountry">Country *</label>
+                            <select id="country" name="countryId" class="form-select" required>
+                                <option value="" data-i18n="selectCountry">Select a country</option>
+                            </select>
+                            <span class="error-message" id="countryError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="department" class="form-label" data-i18n="labelDepartment">Department/State
+                                *</label>
+                            <select id="department" name="departmentId" class="form-select" required disabled>
+                                <option value="" data-i18n="selectDepartment">Select a department</option>
+                            </select>
+                            <span class="error-message" id="departmentError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="municipality" class="form-label" data-i18n="labelMunicipality">Municipality/City
+                                *</label>
+                            <select id="municipality" name="municipalityId" class="form-select" required disabled>
+                                <option value="" data-i18n="selectMunicipality">Select a municipality</option>
+                            </select>
+                            <span class="error-message" id="municipalityError"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary" id="submitBtn">
+                            <span class="btn-text" data-i18n="btnRegister">Register User</span>
+                            <span class="btn-loader" style="display: none;">
+                                <span class="spinner"></span>
+                                <span data-i18n="btnRegistering">Registering...</span>
+                            </span>
+                        </button>
+                    </div>
+                </form>
+
+                <div id="successMessage" class="alert alert-success" style="display: none;">
+                    <span class="alert-icon">✓</span>
+                    <span class="alert-text" data-i18n="msgSuccess">User registered successfully!</span>
+                </div>
+
+                <div id="errorMessage" class="alert alert-error" style="display: none;">
+                    <span class="alert-icon">✕</span>
+                    <span class="alert-text"></span>
+                </div>
+            </section>
+
+            <section class="card users-section">
+                <div class="section-header">
+                    <h2 class="section-title" data-i18n="usersTitle">Registered Users</h2>
+                    <button class="btn btn-secondary" id="refreshBtn">
+                        <span>🔄</span> <span data-i18n="btnRefresh">Refresh</span>
+                    </button>
+                </div>
+
+                <div id="usersContainer" class="users-container">
+                    <div class="loading-state">
+                        <span class="spinner-large"></span>
+                        <p data-i18n="msgLoading">Loading users...</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p data-i18n="footerText">User Registration System | Technical Assessment | Built with C# .NET 8 &
+                PostgreSQL</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
