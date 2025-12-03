@@ -3,6 +3,8 @@
 Una solución completa full-stack para el registro de usuarios con seguimiento de ubicación geográfica (País, Departamento, Municipio), construida con .NET 8, PostgreSQL y JavaScript Vanilla.
 
 > **Nota**: La implementación del Frontend y la containerización con Docker no eran requisitos estrictos de la prueba, pero se incluyeron como un valor agregado para facilitar la instalación y ofrecer una mejor visualización de los datos.
+
+> 🌍 **Multilenguaje**: La aplicación cuenta con soporte para Inglés y Español. Puede cambiar el idioma haciendo clic en el botón situado en la esquina superior izquierda de la interfaz.
 ---
 
 ## � Instrucciones de Ejecución
@@ -56,6 +58,8 @@ docker compose up --build
 *   **DevOps**: Docker, Docker Compose, Nginx.
 
 ---
+
+> 🌍 **Multi-language**: The application supports English and Spanish. You can switch the language by clicking the button located at the top-left corner of the interface.
 
 ## 🚀 Execution Instructions
 
