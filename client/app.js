@@ -1,4 +1,4 @@
-const API_BASE_URL = 'http://localhost:8080/api';
+const API_BASE_URL = 'https://technical-test-jose-becerra-coink.onrender.com/api';
 
 const registrationForm = document.getElementById('registrationForm');
 const countrySelect = document.getElementById('country');
@@ -11,6 +11,8 @@ const successMessage = document.getElementById('successMessage');
 const errorMessage = document.getElementById('errorMessage');
 const langToggle = document.getElementById('langToggle');
 const currentLangSpan = document.getElementById('currentLang');
+
+
 
 const translations = {
     en: {
