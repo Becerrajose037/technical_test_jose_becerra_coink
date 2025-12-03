@@ -1,4 +1,4 @@
-const API_BASE_URL = 'https://technical-test-jose-becerra-coink.onrender.com/';
+const API_BASE_URL = 'https://technical-test-jose-becerra-coink.onrender.com/api';
 
 const registrationForm = document.getElementById('registrationForm');
 const countrySelect = document.getElementById('country');
